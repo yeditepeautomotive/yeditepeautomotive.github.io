@@ -157,12 +157,16 @@ nav.scrolled{background:rgba(7,9,13,.85);backdrop-filter:blur(14px);border-color
 #sponsorluk{overflow:hidden}
 #sponsorluk .bgshow{--ov:linear-gradient(180deg,var(--bg) 0%,rgba(7,9,13,.86) 18%,rgba(7,9,13,.9) 80%,var(--bg) 100%)}
 #sponsorluk>.wrap{position:relative;z-index:1}
-.gallery{padding:70px 0 80px;overflow:hidden;background:var(--bg)}
+.gallery{padding:50px 0 60px;overflow:hidden;background:var(--bg)}
 .gallery .wrap{margin-bottom:28px}
 .gal-track{display:flex;gap:18px;width:max-content;animation:gal 45s linear infinite}
 .gallery:hover .gal-track{animation-play-state:paused}
 @keyframes gal{to{transform:translateX(-50%)}}
 .gal-item{position:relative;width:420px;height:280px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background-size:cover;background-position:center;flex:0 0 auto}
+.gal-item{transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;cursor:zoom-in}
+.gal-item:hover{transform:scale(1.18);z-index:3;border-color:var(--cyan);box-shadow:0 25px 60px -10px rgba(0,0,0,.8),0 0 0 1px rgba(47,216,255,.4)}
+.gal-item span{transition:opacity .3s}
+.gal-track{padding:30px 0}
 .gal-item.tall{width:240px}
 .gal-item span{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);font-size:.9rem;font-weight:600}
 @media (max-width:560px){.gal-item{width:300px;height:210px}.gal-item.tall{width:170px}}
